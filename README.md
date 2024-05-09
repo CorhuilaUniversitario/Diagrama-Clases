@@ -53,12 +53,15 @@ La dependencia es una relación entre dos clases donde una clase utiliza a la ot
 
 # EJEMPLO
 
-Se necesita un sistema de `Pedidos` sistematizado en el cual se puedan agregar los siguentes atributos:
+Se necesita un sistema en el cual se pueda recaudar la información sobre la compra de un producto en una página web, para ello tener en cuenta lo siguiente:
+
+En la clase de  `Pedidos` en la cual se puedan agregar los siguientes atributos:
 
 ```
 + Id
-+ fecha de pedido
-+ Estado de Pedido
++ Fecha de pedido
++ Estado 
+de Pedido
     + Pendiente
     + En curso
     + Completado
@@ -69,10 +72,41 @@ Se necesita un sistema de `Pedidos` sistematizado en el cual se puedan agregar l
 * Calcular el Total
 ```
 
-Con ello tambien se necesita la siguiente informacion de los `Cliente`:
+También se necesita la siguiente información de los `Cliente`:
 
 ```
-+ 
++ Id
++ Nombre
++ Direccion
++ Telefono
++ Correo Electronico
 ```
+
+También se necesita información sobre los `Productos` en los cuales el cliente está interesado en comprar:
+
+```
++ Id
++ Nombre
++ Descripsión
++ Precio
++ Categoria
++ Stock
+```
+
+> Diagrama de Clases
+![Diagrama de Clases](Imagenes/Diagrama%20de%20Clases.png)
+
+> ASOCIACIÓN
+
+Cliente "1"---"*" Pedido
++ La clase Cliente se relaciona con la clase Pedido mediante una asociación.
+Esto significa que un cliente puede realizar varios pedidos.
+
+> COMPOSICIÓN
+
+Pedido *-- Producto
++ La clase Pedido se relaciona con la clase Producto mediante una composición.
+Esto significa que un pedido puede contener varios productos.
+Pero un pedido no puede existir sin productos.
 
 `@Nicolas Tello`
