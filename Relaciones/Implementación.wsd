@@ -1,0 +1,22 @@
+@startuml Implementación
+
+class Vehiculos {
+    +carretera: ()  
+}
+
+class automóviles {
+    -nombre: String
+    +carretera: ()
+}
+
+class Barcos {
+    -nombre: String
+    +carretera: ()
+}
+
+
+Vehiculos <.. automóviles
+Vehiculos <.. Barcos
+
+@enduml
+

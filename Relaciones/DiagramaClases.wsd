@@ -1,0 +1,43 @@
+@startuml Diagrama de Clases
+
+class Cliente {
+    - id: int
+    - nombre: String
+    - direccion: String
+    - telefono: String
+    - correoElectronico: String
+    + realizarPedido(pedido: Pedido): void
+}
+
+class Pedido {
+    - id: int
+    - fechaPedido: Date
+    - estadoPedido: String // Pendiente, En Curso, Completado
+    - cliente: Cliente
+    - productos: Producto[]
+    + agregarProducto(producto: Producto): void
+    + calcularTotal(): double
+}
+
+class Producto {
+    - id: int
+    - nombre: String
+    - descripcion: String
+    - precio: double
+    - categoria: String
+    - stock: int
+    + agregarAlCarro(cantidad: int): void
+}
+
+'ASOCIACIÓN
+Cliente "1"---"*" Pedido
+' La clase Cliente se relaciona con la clase Pedido mediante una asociación.
+' Esto significa que un cliente puede realizar varios pedidos.
+
+'COMPOSICIÓN
+Pedido *-- Producto
+'La clase Pedido se relaciona con la clase Producto mediante una composición.
+'Esto significa que un pedido puede contener varios productos.
+'Pero un pedido no puede existir sin productos.
+
+@enduml

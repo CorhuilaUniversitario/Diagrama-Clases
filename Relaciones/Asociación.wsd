@@ -1,0 +1,15 @@
+@startuml Asociación
+
+class Conductores{
+    -carros : Carro []
+    +ICarro (carro : Carro)
+}
+
+class Carros{
+    -conductores : Conductor []
+    +IConductor (conductor : Conductor)
+}
+
+Conductores "1" -- "*" Carros
+
+@enduml

@@ -1,0 +1,25 @@
+@startuml Compisición
+
+class Persona{
+    -cabeza
+    -cuerpo
+    +conjuntoCabeza (cabeza : cabeza)
+    +conjuntoCuerpo (cuerpo : cuerpo)
+}
+
+class Cabeza{
+    -ojos
+    -boca
+    -nariz
+}
+
+class Cuerpo{
+    -altura
+    -peso
+    -piel
+}
+
+Persona *-- Cabeza
+Persona *-- Cuerpo
+
+@enduml

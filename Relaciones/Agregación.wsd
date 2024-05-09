@@ -1,0 +1,27 @@
+@startuml Agregación
+
+class ConductorBus{
+    -ropa
+    -sombrero
+    +usoRopa (ropa : ropa)
+    +usoSombrero (sombrero : sombrero)
+    +mostrar ()
+}
+
+class Ropa{
+    -color
+    -talla
+    +mostrar ()
+}
+
+
+class Sombrero{
+    -color
+    -talla
+    +mostrar ()
+}
+
+ConductorBus o-- Ropa
+ConductorBus o-- Sombrero
+
+@enduml

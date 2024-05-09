@@ -1,0 +1,17 @@
+@startuml Herencia
+
+class automóviles {
+    -nombre: String
+    +carretera: ()  
+}
+
+class Taxis {
+}
+
+class autobuses {
+}
+
+automóviles <|-- Taxis
+automóviles <|-- autobuses
+
+@enduml
