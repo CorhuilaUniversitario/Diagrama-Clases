@@ -63,6 +63,7 @@
     Clase2_1 --|> Clase1_2
 
     '3 - Vínculos entre clases
+    
     'Composición
     'La composición se representa con el símbolo *-- entre las clases vinculadas
     'El asterisco va orientado hacia la clase que es compuesta con las otras
@@ -85,4 +86,4 @@
     Herencia1 <|-- Herencia2
     Herencia1 <|-- Herencia3
 
-@enduml
+@enduml 

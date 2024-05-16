@@ -2,8 +2,34 @@
 
 ![Diagrama de Clases](Imagenes/Ejemplos.png)
 
-Explicación de relación entre diagrama de clases...
+## Estructura Diagrama de Clases
 
+### Clases:
++ Representa un objeto o un conjunto de objetos que comparte una estructura y un comportamiento comunes.
+
+### Atributos:
++ Propiedades que definen las características de los objetos de la clase. Se representan por `nombre:tipo`, indicando el tipo de dato del atributo.
+
+### Metodos:
++ Operaciones que definen el comportamiento de los objetos de la clase.Se representan por `nombre([parámetros]):tipoRetorno`, indicando los parámetros de entrada y el tipo de dato del valor de retorno.
+
+```
+@startuml Ejemplos
+
+class Cliente {
+    - id: int
+    - nombre: String
+    - direccion: String
+    - telefono: String
+    - correoElectronico: String
+    + realizarPedido(pedido: Pedido): void
+}
+
+@enduml 
+```
+
+# Relación Diagrama de Clases
+Explicación de relación entre diagrama de clases...
 ## Relación Herencia
 
 La herencia es una relación entre dos clases donde una clase hereda los atributos y métodos de otra clase. En el diagrama de clases, se representa mediante una línea sólida con una flecha apuntando hacia la clase base.
